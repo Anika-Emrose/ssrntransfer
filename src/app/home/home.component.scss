@@ -1,0 +1,362 @@
+.transport-city {
+  background-color: #f9f9f9;
+}
+
+.city-card{
+  background: #ffffff;
+  border: 1px solid #ded9d9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.city-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.city-card img {
+  max-width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.city-card h1 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.city-card p {
+  font-size: 1rem;
+  color: #666;
+}
+.city-card-style{
+  padding: 20px;
+}
+.services-section {
+  background-color: #f8f9fa;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.service-icon {
+  font-size: 50px;
+  color: #007bff;
+  margin-bottom: 15px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.service-card p {
+  font-size: 16px;
+  color: #464343;
+}
+
+
+.transfer-card {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.transfer-icon {
+  font-size: 3rem;
+  color: #007bff; /* Customize icon color */
+}
+.transfer-card h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+.transfer-card p {
+  font-size: 1rem;
+  color: #555; /* Optional text color */
+}
+.slider-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+.stars i {
+  font-size: 1.2rem;
+  margin-right: 0.2rem;
+}
+.carousel-item p {
+  font-size: 1rem;
+  color: #555;
+}
+.style-in {
+  border: 1px solid #adb5bd;
+  padding: 10px;
+}
+
+.faq-section {
+
+  padding: 20px 0;
+}
+.faq-section {
+
+  padding: 20px 0;
+}
+.faq-header {
+  font-size: 1.2rem;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color:rgb(253, 254, 255);
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.faq-header.active {
+  background-color:rgb(207,226,255);/* Active background color */
+  color: #fff; /* Active text color */
+}
+.faq-icon {
+  transition: transform 0.3s ease;
+}
+.faq-icon.rotate {
+  transform: rotate(180deg);
+}
+.faq-body {
+  padding: 10px;
+  background-color: #fff;
+  color: #555;
+}
+.faq-card {
+  border: 1px solid #adb5bd;
+}
+button.btn.btn-primary.d-block.mx-auto {
+  padding: 10px;
+  margin: 50px;
+}
+ .content-section .img-fluid {
+  max-width: 100%;
+  height: auto;
+  margin-top: -14px;
+}
+section.content-section {
+  margin-top: -63px;
+}
+.transfer-text {
+  padding: 40px 0; /* Adds padding above and below the section */
+  background-color: #f8f9fa; /* Optional background color */
+}
+
+.transfer-text h2 {
+  margin-bottom: 20px; /* Adds space below the heading */
+}
+.transfer-text p {
+}
+.experience-text i {
+  font-size: 30px; /* Icon size */
+  color: #000; /* Icon color */
+}
+
+// .experience-text h3 {
+//   font-size: 24px; /* Heading font size */
+//   margin: 0; /* Remove default margin */
+// }
+
+// .experience-text p {
+//   font-size: 16px;
+//   margin-top: 10px;
+// }
+
+// .experience-text .row {
+//   margin-bottom: 20px; /* Add space between rows */
+// }
+
+// .experience-text .col-md-6 {
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+// }
+
+// .experience-text .ml-3 {
+//   margin-left: 15px; /* Space between icon and heading */
+// }
+.experience-text-style {
+  margin-top: 95px;
+  margin-left: 20px;
+}
+.experience-text i {
+  font-size: 40px;
+  color: green; /* Icon color changed to green */
+}
+section.experience-text,.icon-text-section,.works ,.experience-section,.contact-social-media{
+  background-color: #f7f7f7;
+}
+.icon-text-section row{
+  padding: 8px;
+}
+.icon-text-section-style[_ngcontent-ng-c2140695576] {
+  background-color: rgb(255, 255, 255);
+  padding: 20px;
+}
+.works-lavel-style div {
+  padding: 8px;
+}
+.experience-section h2{
+  font-size: 18px;
+}
+.experience-section[_ngcontent-ng-c1596799742] button[_ngcontent-ng-c1596799742] {
+  background-color: green;
+  color: white;
+  padding: 18px;
+  border-radius: 50px;
+}
+
+.icon-text-section div{
+  margin: 4px;
+
+}
+icon-text-section-style p b{
+  text-align: justify;
+
+  margin-left: 20px;
+}
+icon-text-section-style p {
+  text-align: justify;
+
+
+}
+.list-unstyled li a{
+  text-decoration: none;
+}
+.contact-social-media{
+  padding: 10px
+}
+
+
+.last-section {
+  padding: 10px;
+  // margin: -123px;
+
+}
+.last-section p{
+margin-top: 10px;}
+
+
+// .social-icons a i{
+// margin-top: 10px;
+// }
+
+
+/* For small devices (phones, less than 576px) */
+// @media (max-width: 576px) {
+//   .last-section[_ngcontent-ng-c4200862846] {
+//       padding: 5px; /* Adjust padding for smaller screens */
+//       margin-top: 0px;
+//       margin: -50px;/* Keep or adjust as needed */
+//   }
+// }
+
+// /* For medium devices (tablets, 576px and up) */
+// @media (min-width: 576px) and (max-width: 768px) {
+//   .last-section[_ngcontent-ng-c4200862846] {
+//       padding: 8px; /* Adjust for medium-sized screens */
+//       margin-top: 5px;
+//       margin: -80px;/* Example adjustment */
+//   }
+// }
+
+// /* For large devices (laptops and desktops, 768px and up) */
+// @media (min-width: 768px) and (max-width: 1200px) {
+//   .last-section[_ngcontent-ng-c4200862846] {
+//       padding: 10px; /* Default padding */
+//       margin-top: 10px;
+//       margin: -100px; /* Example adjustment */
+//   }
+// }
+
+/* For extra-large devices (larger desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .last-section[_ngcontent-ng-c4200862846] {
+      padding: 12px; /* Slightly larger padding */
+      margin-top: 15px;
+      margin: -123px; /* Example adjustment */
+  }
+}
+.location-icon{
+
+  line-height: 10px;
+  color: #007bff;
+}
+input[type="text"], input[type="email"], input[type="date"], input[type="time"], textarea, select {
+  padding: 0.75rem; /* Add padding inside input fields */
+  margin-bottom: 0.5rem; /* Add margin below input fields */
+  border-radius: 5px; /* Optional: rounded corners */
+  border: 1px solid #ccc;
+}
+/* Default button style (for larger screens like desktops) */
+.custom-button[_ngcontent-ng-c1827033107] {
+  width: 20%;
+  text-align: left;
+  margin-left: 0;
+  padding: 10px;
+  margin-left: 10p;
+}
+
+/* For tablet and smaller screens (e.g., screens under 768px) */
+@media (max-width: 768px) {
+  .custom-button {
+      width: 70%; /* Adjust the width for tablet or smaller screens */
+      text-align: center; /* Optional: Center the text on smaller screens */
+      margin-left: auto; /* Center the button horizontally */
+      margin-right: auto; /* Center the button horizontally */
+  }
+}
+
+/* For mobile screens (e.g., screens under 480px) */
+@media (max-width: 480px) {
+  .custom-button {
+      width: 90%; /* Adjust the width for mobile screens */
+      text-align: center; /* Optional: Center the text */
+      margin-left: auto; /* Center the button horizontally */
+      margin-right: auto; /* Center the button horizontally */
+  }
+}
+.map-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+  /* For smaller screens (tablets, mobiles) */
+  @media (max-width: 768px) {
+    .map-container {
+      padding-bottom: 75%; /* Adjusted aspect ratio for smaller screens */
+    }
+  }
+
+  /* For very small screens (mobile devices) */
+  @media (max-width: 480px) {
+    .map-container {
+      padding-bottom: 100%; /* More square-like ratio for very small screens */
+    }
+  }

@@ -1,0 +1,70 @@
+
+<div class="row">
+  
+    
+    <div class="col-md-6">
+        <h2 >Content </h2>
+    <form (ngSubmit)="onSubmit(contentForm)" #contentForm="ngForm">
+       <div class="fromgroup row">
+         <label class="col-md-2" >Title</label>
+         <div class="col-md-8">
+            <input type="text" name="Title" placeholder="Title" class="form-control"  ngModel required  />
+        </div>
+       </div>
+b
+
+       
+        
+            <div class="fromgroup row mt-2">
+                <label class="col-md-2"> Comments</label>
+                <div class="col-md-8">
+                    <textarea type="text"  name="comments"   class="form-control" ngModel ></textarea>
+                </div>
+            </div>
+            <div style="padding-right: 110px; padding-top: 10px;">
+                <input type="submit" value="Submit" class="btn btn-primary float-end "/>
+    
+            </div>
+    </form>
+            
+                        
+    </div>
+    <div class="col-md-6">
+        <h2> Content List</h2>
+        <div *ngIf="errorMessage" class="error">{{ errorMessage }}</div>
+   
+        <table class="table" *ngIf="contents.length">
+           <thead>
+               <tr>
+                   <th>
+                       Id
+                   </th>
+                   <th>Title</th>
+                   <th>Comments</th>
+                   
+                   <th>Action</th>
+               </tr>
+           </thead>
+           <tbody>
+           <tr  *ngFor="let Content of contents">
+               <td>
+                   {{ Content.UserId }}
+                  </td> 
+              <td>
+               {{ Content.Title }}
+              </td> 
+              <td> {{ Content.comments }} </td>
+            
+              <td><a href="/"> <i class="fa fa-pencil"></i>Edit</a></td>
+           </tr>
+       </tbody>
+        </table>
+      
+        <div *ngIf="!contents.length && !errorMessage">
+          No Content found.
+        </div>
+        
+   
+       </div>
+</div>
+

@@ -1,0 +1,96 @@
+<div class="col-md-12" style="max-width: fit-content;
+margin-left: auto;
+margin-right: auto;
+width: 220px;">
+  <img src="image/ssrn_logo.jpg" alt="logo" class="img-fluid mb-4">
+</div>
+
+<div class="register-beam animate-register">
+  <p>Are you a chauffeur? Join our network and get connected with passengers</p>
+  <a href="/become-a-carrier" class="btn btn-primary">Register Now</a>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/"></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav" style="justify-content: center;">
+      <ul class="navbar-nav" *ngIf="user">
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/user">User</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/content">content</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Logout</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav" *ngIf="!user">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="/">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/bookaride">Book a Ride</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/services">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/blog">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/register">Register</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/installapp">InstallApp</a>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
+
+
+<section class="contact-social-media">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12 text-center">
+        <div class="social-icons d-flex justify-content-center align-items-center flex-wrap">
+          <!-- YouTube Icon -->
+          <a href="https://www.youtube.com" target="_blank" class="text-black mx-3 mb-2">
+            <i class="fab fa-youtube fa-2x"></i>
+          </a>
+          <!-- Instagram Icon -->
+          <a href="https://www.instagram.com" target="_blank" class="text-black mx-3 mb-2">
+            <i class="fab fa-instagram fa-2x"></i>
+          </a>
+          <!-- WhatsApp Icon -->
+          <a href="https://wa.me/123456789" target="_blank" class="text-black mx-3 mb-2">
+            <i class="fab fa-whatsapp fa-2x"></i>
+          </a>
+          <!-- Skype Icon -->
+          <a href="https://www.skype.com" target="_blank" class="text-black mx-3 mb-2">
+            <i class="fab fa-skype fa-2x"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <div class="bg-dark text-white  text-center last-section">
+      <p>© 2024 SSRN TRANSFER . All rights reserved.</p>
+    </div>
+
+</section>

@@ -1,0 +1,784 @@
+<style>
+
+</style>
+
+<div class="alert alert-info text-center mb-4"> <strong>Book Your Ride Now!</strong>
+"Fill out the form below to scedule our ride with us."
+</div>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bootstrap Tabs Example</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container-fluid">
+    <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="transferservice-tab" data-bs-toggle="tab" data-bs-target="#transferservice" type="button" role="tab" aria-controls="transferservice" aria-selected="true">Transfer Service</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="chauffeurservice-tab" data-bs-toggle="tab" data-bs-target="#chauffeurservice" type="button" role="tab" aria-controls="chauffeurservice" aria-selected="false">Chauffeur Service</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="sightseeingtour-tab" data-bs-toggle="tab" data-bs-target="#sightseeingtour" type="button" role="tab" aria-controls="sightseeingtour" aria-selected="false">Sightseeing Tour</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="eventride-tab" data-bs-toggle="tab" data-bs-target="#eventride" type="button" role="tab" aria-controls="eventride" aria-selected="false">Event Ride</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="courierservice-tab" data-bs-toggle="tab" data-bs-target="#courierservice" type="button" role="tab" aria-controls="courierservice" aria-selected="false">Courier Service</button>
+      </li>
+    </ul>
+
+    <!-- Tabs Content -->
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active" id="transferservice" role="tabpanel" aria-labelledby="transferservice-tab">
+        <div class="col-md-12">
+          <div class="row justify-content-center">
+              <div class="col-md-7">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="fromgroup row ">
+                      <label for="pickuplocation">Pick Up Location</label>
+                      <div class="col-md-12">
+                          <input type="text" id="name" name="pickuplocation" placeholder="Location, Airport, Hotel..." class="form-control" required>
+                      </div>
+                   </div>
+                   <div class="fromgroup row">
+                      <label for="dropoffloacation">Dropoff Loacation</label>
+                      <div class="col-md-12">
+                          <input type="text" name="dropoffloacation" placeholder="Location, Airport, Hotel..." class="form-control">
+                      </div>
+                   </div>
+                   <div class="fromgroup row">
+                      <div class="col-md-6">
+                          <div class="fromgroup row">
+                          <label for="tripdate">Trip Date</label>
+                            <div class="col-md-12">
+                              <input type="date" name="date" class="form-control">
+                            </div>
+                         </div>
+                     </div>
+                    <div class="col-md-6">
+                      <div class="fromgroup row">
+                          <label for="triptime">Trip Time</label>
+                            <div class="col-md-12">
+                              <input type="time" name="time" class="form-control">
+                            </div>
+                         </div>
+                    </div>
+                   </div>
+                   <div class="fromgroup row">
+                      <div class="col-md-4">
+                          <div class="fromgroup row">
+                              <label for="adults">Adults</label>
+                                <div class="col-md-12">
+                                  <input type="number" name="adults" class="form-control">
+                                </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="fromgroup row">
+                              <label for="kids">Kids</label>
+                                <div class="col-md-12">
+                                  <input type="number" name="Kids" class="form-control">
+                                </div>
+                          </div>
+                      </div>
+                      <div class="col-md-4">
+                          <div class="fromgroup row">
+                              <label for="suitcases">Suitcases</label>
+                                <div class="col-md-12">
+                                  <input type="number" name="Suitcases" class="form-control">
+                                </div>
+                          </div>
+                      </div>
+                   </div>
+                   <div class="fromgroup row">
+                      <div class="col-md-6">
+                          <div class="fromgroup row">
+                              <label for="flightnumber">Flight Number</label>
+                                <div class="col-md-12">
+                                  <input type="text" name="flightnumber" placeholder="e.g., LH1234" class="form-control">
+                                </div>
+                          </div>
+                      </div>
+                   </div>
+                   <div class="fromgroup row">
+                      <div class="col-md-6">
+                          <div class="fromgroup row">
+                              <label for="preferredlanguage">Preferred Language</label>
+                                <div class="col-md-12">
+                                  <select name="preferredlanguage" id="preferredlanguage" class="form-control">
+                                      <option value="English">English</option>
+                                      <option value="Espanol">Espanol</option>
+                                      <option value="Deutsch">Deutsch</option>
+                                      <option value="Francais">Francais</option>
+                                    </select>
+                               </div>
+                          </div>
+                      </div>
+                   </div>
+                   <div class=""></div>
+                  <div class="fromgroup row">
+                    <label for="additionalinformation">Additional Information</label>
+                     <div class="col-md-12">
+                        <textarea name="additionalinformation" id="additionalinformation" class="form-control"></textarea>
+                     </div>
+                  </div>
+                  <div class="fromgroup row">
+                    <label for="email">Email</label>
+                    <div class="col-md-12">
+                        <input type="email" name="email" placeholder="Enter your Email" class="form-control">
+                    </div>
+                 </div>
+                 <div class="d-grid">
+                  <button class="btn btn-primary btn-block custom-button">Submit Ride Request</button>
+                </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-5">
+                <section>
+                  <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3020.8286356226454!2d-73.41905442522675!3d40.787781371382216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e0!4m0!4m5!1s0x89e82bd4956ea6e5%3A0xaaf08eba030be0d5!2s200%20Broadhollow%20Rd%20Suite%20207%2C%20Melville%2C%20NY%2011747%2C%20USA!3m2!1d40.7877814!2d-73.4164795!5e0!3m2!1sen!2sbd!4v1732100039694!5m2!1sen!2sbd" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  </div>
+                </section>
+
+              </div>
+          </div>
+      </div>
+      </div>
+
+      <section id="download-buttons" class="destinations-services-section py-5 bg-light">
+        <div class="container">
+          <div class="text-center mb-4">
+            <h1 class="main-heading">SSRN Transfer: Transfer & Chauffeur Services</h1>
+            <a href="" class="btn btn-success mb-2 mb-md-0 me-2" target="_blank" rel="noopener noreferrer">
+              <i class="bi bi-play-circle" style="font-size: 1.5rem;">
+
+              </i>
+              "Download on Google play"
+            </a>
+            <button class="btn btn-secondary">
+              <i class="bi bi-apple" style="font-size: 1.5rem;">
+
+              </i>
+              "Coming soon on app store"
+            </button>
+          </div>
+        </div>
+      </section>
+</div>
+
+
+
+    <section class="transport-city py-5">
+        <h3 class="text-center mb-3">Where We Transport You To</h3>
+        <div class="container">
+            <!-- Row of 3 Cards -->
+            <div class="row text-center">
+                <div class="col-md-4 mb-4">
+                    <div class="city-card">
+                        <img src="image/destination1.jpg" alt="Partner 1" class="img-fluid">
+                        <h1>Partner 1</h1>
+                        <p>Explore the heart of the city with our reliable and comfortable transfer services.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="city-card">
+                        <img src="image/destination2.jpg" alt="Partner 2" class="img-fluid">
+                        <h1>Partner 2</h1>
+                        <p>Seamless and timely transfers to and from the airport, ensuring you never miss a flight.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="city-card">
+                        <img src="image/destination3.jpg" alt="Partner 3" class="img-fluid">
+                        <h1>Partner 3</h1>
+                        <p>Efficient transportation to major business districts for your corporate needs.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Single Centered Card -->
+            <div class="row justify-content-center">
+                <div class="col-md-4 pt-4">
+                    <div class="city-card text-center ">
+                       <div class="city-card-style">
+                        <h4>....And many More</h4>
+                        <p>We cover a wide range of destinations to meet all your transportation needs.</p>
+                        <button class="btn btn-primary">Request a Ride</button>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <section class="services-section py-5">
+      <h3 class="text-center mb-5">Our Services</h3>
+      <div class="container">
+          <!-- Top Row: 3 Services -->
+          <div class="row text-center">
+              <div class="col-md-4 mb-4">
+                  <div class="service-card">
+                    <i class="service-icon fa-solid fa-car"></i>
+                      <h3>Transfer Service </h3>
+                      <p>Reliable and comfortable transfers for individuals and groups to various destinations.</p>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="service-card">
+                      <i class="service-icon fa-solid fa-users"></i>
+                      <h3>Chauffeur Service</h3>
+                      <p>Professional chauffeur-driven services for a luxurious and stress-free travel experience.</p>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="service-card">
+                      <i class="service-icon fa-solid fa-binoculars"></i>
+                      <h3>Sightseeing Tours</h3>
+                      <p>Discover the city's landmarks and hidden gems with our personalized sightseeing tours.</p>
+                  </div>
+              </div>
+          </div>
+          <!-- Bottom Row: 2 Services -->
+          <div class="row text-center justify-content-center">
+              <div class="col-md-4 mb-4">
+                  <div class="service-card">
+                      <i class="service-icon fa-solid fa-calendar-days"></i>
+                      <h3>Event Rides</h3>
+                      <p>Specialized transportation services for weddings, corporate events, and other special occasions.</p>
+                  </div>
+              </div>
+              <div class="col-md-4 mb-4">
+                  <div class="service-card">
+                      <i class="service-icon fa-solid fa-box"></i>
+                      <h3>Courier Service</h3>
+                      <p>Fast and secure courier services for delivering documents, parcels, and more across the city.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <section class="etransfer py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Why Choose SSRN TRANSFER?</h2>
+      <div class="row">
+        <!-- First Service -->
+        <div class="col-md-4 transfer-card">
+          <i class="fa-regular fa-clock transfer-icon"></i>
+          <h3>Punctuality Guaranteed</h3>
+          <p>We ensure timely pickups and drop-offs so you never miss an important appointment.</p>
+        </div>
+        <!-- Second Service -->
+        <div class="col-md-4 transfer-card">
+          <i class="fa-solid fa-users transfer-icon"></i>
+          <h3>Professional Drivers</h3>
+          <p>Our drivers are trained, courteous, and committed to providing the best service.</p>
+        </div>
+        <!-- Third Service -->
+        <div class="col-md-4 transfer-card">
+          <i class="fa-solid fa-car transfer-icon"></i>
+          <h3>Modern Fleet</h3>
+          <p>Travel in comfort and style with our well-maintained and modern vehicles.</p>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Fourth Service -->
+        <div class="col-md-4 transfer-card">
+          <i class="fa-solid fa-location-dot transfer-icon"></i>
+          <h3>Wide Coverage</h3>
+          <p>We cover all major areas in the city, ensuring you get where you need to go.</p>
+        </div>
+        <!-- Fifth Service -->
+        <div class="col-md-4 transfer-card">
+          <i class="fa-solid fa-wallet transfer-icon"></i>
+          <h3>Affordable Pricing</h3>
+          <p>Get top-notch service without breaking the bank. Competitive rates for all our services.</p>
+        </div>
+        <!-- Sixth Service -->
+        <div class="col-md-4 transfer-card">
+          <i class="fa-solid fa-shield  transfer-icon"></i>
+          <h3>Safety First</h3>
+          <p>2Your safety is our priority. All our vehicles undergo regular maintenance and safety checks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slider-section py-5">
+    <div class="container">
+      <div class="row justify-content-center">
+
+        <div class="col-md-8">
+          <h2 class="text-center">What Our Customers Say</h2>
+          <div id="carouselExample" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner">
+              <!-- Slide 1 -->
+              <div class="carousel-item active">
+               <div class="style-in">
+                <div class="text-center ">
+                  <h3>Ines Petrovic</h3>
+                  <div class="stars mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                  </div>
+                  <p>""Smooth and comfortable ride. The booking process was straightforward and the staff was very helpful.""</p>
+                </div>
+               </div>
+              </div>
+              <!-- Slide 2 -->
+              <div class="carousel-item">
+                <div class="text-center style-in">
+                  <h3>Arvid Lindström</h3>
+                  <div class="stars mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star "></i>
+                  </div>
+                  <p>"The team was super helpful and solved my issues quickly. Thank you!"</p>
+                </div>
+              </div>
+              <!-- Slide 3 -->
+              <div class="carousel-item">
+                <div class="text-center style-in">
+                  <h3>Liora Richter</h3>
+                  <div class="stars mb-2">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star "></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star "></i>
+                  </div>
+                  <p>"Amazing experience. Fast, secure, and reliable service every time."</p>
+                </div>
+              </div>
+            </div>
+            <!-- Carousel Controls -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section">
+    <div class="container my-5">
+      <h2 class="text-center mb-4">Ask a Question</h2>
+      <div class="row justify-content-center">
+        <div class="col-md-11">
+          <!-- Question 1 -->
+          <div class="faq-card card-style-faq">
+            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="false" aria-controls="faq1">
+              <span>What is the return policy?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div id="faq1" class="collapse">
+              <div class="faq-body">
+                Our return policy allows you to return items within 30 days of purchase with a valid receipt.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="faq-card">
+            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false" aria-controls="faq2">
+              <span>How can I track my order?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div id="faq2" class="collapse">
+              <div class="faq-body">
+                You can track your order using the tracking number provided in your confirmation email.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="faq-card">
+            <div class="faq-header" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
+              <span>What payment methods are accepted?</span>
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </div>
+            <div id="faq3" class="collapse">
+              <div class="faq-body">
+                We accept all major credit cards, PayPal, and bank transfers.
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn-primary d-block mx-auto">Book Your Ride Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="content-section pb-5">
+    <div class="container">
+        <div class="row align-items-center">
+            <h2 class="text-center w-100 pb-4">About SSRN TRANSFER
+            </h2> <!-- Centered Heading -->
+            <div class="col-md-6">
+                <img src="image/service_overview.jpg" alt="Image" class="img-fluid img-hover">
+            </div>
+            <div class="col-md-6">
+              <div class="position-relative">
+                  <!-- Video overlay hidden initially -->
+                  <div class="video-overlay position-absolute top-0 left-0 w-100 h-100 d-flex justify-content-center align-items-center" style="background-color: rgba(0, 0, 0, 0.5); display: none;">
+                      <!-- YouTube video embedded, shown on hover -->
+                      <!-- <iframe class="embed-responsive-item" width="100%" height="350px" src="https://youtu.be/qTggONUslcE?t=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"  allowfullscreen></iframe> -->
+                      <iframe class="embed-responsive-item" width="100%" height="350px" src="https://www.youtube.com/embed/CoQfichK5Iw" title="Deep Focus Music To Improve Concentration - 12 Hours of Ambient Study Music to Concentrate #745" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                  <p>Some additional content or text can go here.</p>
+              </div>
+          </div>
+        </div>
+    </div>
+</section>
+
+<section class="transfer-text">
+  <div class="container"> <!-- Corrected the class name here -->
+    <div class="row">
+      <div class="col-md-11">
+        <h2 class="text-center">Experience Premium SSRN TRANSFER
+          with Us</h2>
+        <p class="text-center">At SSRN Transfer, we redefine urban transportation by combining reliability, comfort, and exceptional customer service. Our mission is to provide seamless transfer experiences tailored to your unique needs, ensuring you reach your destination safely and on time. Whether it's a business meeting, airport transfer, or a leisurely city tour, our comprehensive services cater to every aspect of your journey.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="experience-text pb-5">
+  <div class="container">
+    <!-- First Row: Two Divs Side by Side -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-map"></i>
+          <div class="experience-text-style">
+            <h3>Comprehensive Coverage</h3>
+            <p>We operate globally, offering seamless city-to-city rides across a wide range of destinations. No matter where you’re headed, SSRN Transfer is your trusted partner for reliable and convenient transportation.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-calendar-days"></i>
+          <div class="experience-text-style">
+            <h3>Transparent Pricing</h3>
+            <p>No hidden fees or unexpected charges. Our pricing is clear and competitive, providing you with excellent value for top-tier transportation services.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second Row: Two Divs Side by Side -->
+    <div class="row">
+      <div class="col-md-6">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-dollar-sign"></i>
+          <div class="experience-text-style">
+            <h3>
+              Easy Booking Process</h3>
+            <p>Our user-friendly booking system allows you to schedule your transfers effortlessly. Whether you prefer booking online, via our mobile app, or through a phone call, we make sure the process is smooth and convenient.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="d-flex align-items-center">
+          <i class="fa-solid fa-gauge"></i>
+          <div class="experience-text-style">
+            <h3>Advanced Fleet Management</h3>
+            <p>Our modern fleet is equipped with the latest technology to ensure safety, efficiency, and comfort. From GPS tracking to in-car amenities, we prioritize your experience every step of the way.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="icon-text-section pb-5 pt-5">
+  <div class="container">
+    <h2>Our Commitment to You</h2>
+    <p>
+      At SSRN Transfer, our commitment goes beyond just providing transportation. We strive to build lasting relationships with our clients by offering personalized services, maintaining the highest standards of safety and professionalism, and continuously improving our offerings based on your feedback.</p>
+  <div class="icon-text-section-style">
+    <div class="row">
+      <!-- First Div -->
+      <div class="col-md-11">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-car" style="font-size: 40px; color: green;"></i>
+          <p>
+            <b>Customer Satisfaction: </b><span>Your satisfaction is our priority. We listen to your needs and tailor our services to meet and exceed your expectations.</span></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-4">
+      <!-- Second Div -->
+      <div class="col-md-11">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-bus" style="font-size: 40px; color: green;"></i>
+          <p><b>  Experienced Team</b><span>Our team of experienced drivers and support staff are dedicated to ensuring a pleasant and hassle-free experience for you.</span></p>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="row pt-4">
+      <!-- Third Div -->
+      <div class="col-md-11">
+        <div class="d-flex align-items-center">
+          <i class="fas fa-plane" style="font-size: 40px; color: green;"></i>
+         <p><b>Safety Assurance:</b><span>We adhere to strict safety protocols and regularly inspect our vehicles to provide you with a secure journey.</span></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+
+
+<section class="works">
+  <div class="container">
+    <div class="row">
+      <div class="works-lavel-style">
+        <h2>How it Works</h2>
+        <p>
+          At SSRN Transfer, we ensure that securing your transportation is seamless and tailored to your specific needs. Here's how our process works:</p>
+
+      <div class="col-md-11">
+        <p><b>1.Submit Your Request:</b><span>Fill out our detailed request form with your trip details, including pickup and dropoff locations, date, time, and any special requirements</span> .</p>
+      </div>
+      <div class="col-md-11">
+        <p><b>2.Submit Your Request:</b> Review the offers you receive and select the one that best fits your preferences and budget.</p>
+      </div>
+      <div class="col-md-11">
+        <p><b>3.Receive Multiple Offers:</b> Our network of chauffeurs and partners worldwide receive your request and send you personalized offers tailored to your needs.</p>
+      </div>
+      <div class="col-md-11">
+        <p><b>4.Once you've selected an offer,</b> confirm your booking through our platform. You'll receive a confirmation email or SMS with all the necessary details.</p>
+      </div>
+      <div class="col-md-11">
+        <p><b>5.On the scheduled date and time, </b>our professional driver will arrive at your specified location, ready to provide you with a comfortable and safe journey to your destination.</p>
+      </div>
+      <p>This streamlined process ensures that you receive the best possible service tailored to your individual needs, without any hassle.</p>
+    </div>
+  </div>
+  </div>
+</section>
+
+<section class="experience-section pt-5 pb-5">
+  <div class="container">
+    <!-- Section Title -->
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h2>Our Premium SSRN Transfer</h2>
+        <p>Experience comfort and reliability with our exclusive ssrn transfer services. Choose your destination and let us take care of the rest.</p>
+      </div>
+    </div>
+
+    <!-- Card Row -->
+    <div class="row mt-5">
+      <!-- Card 1 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image/fleet_sedan.jpg" class="card-img-top" alt="Transfer 1">
+          <div class="card-body text-center">
+            <h2>Luxury Sedan</h2>
+            <p>Perfect for solo travelers or couples seeking comfort and elegance during their transfer.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image/fleet_suv.jpg" class="card-img-top" alt="Transfer 2">
+          <div class="card-body text-center">
+            <h2>Spacious SUV</h2>
+            <p>Ideal for families or groups requiring more space and additional luggage capacity.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-md-4">
+        <div class="card">
+          <img src="image/fleet_van.jpg" class="card-img-top" alt="Transfer 3">
+          <div class="card-body text-center">
+            <h2>Comfortable Van</h2>
+            <p>Best suited for large groups, corporate events, or transporting multiple passengers with ease</p>
+          </div>
+        </div>
+      </div>
+    </div>
+<h3 class="pt-5">Environmental Responsibility</h3>
+    <p class="pt-2">
+
+      We are committed to reducing our carbon footprint and promoting sustainable transportation. Our fleet includes eco-friendly vehicles that minimize emissions without compromising on performance or comfort. By choosing SSRN Transfer, you're contributing to a greener and more sustainable environment.</p>
+  <button class="btn btn-primary ms-auto">Reserve Your Transfer Today</button>
+    </div>
+</section>
+
+<footer class=" bg-white text-dark py-4 pb-5">
+  <div class="container">
+    <div class="row">
+      <!-- Column 1: Paragraph -->
+      <div class="col-md-3 mb-3">
+        <h4>SSRN TRANSFER LLC
+          </h4>
+        <p>SSRN Transfer offers reliable and comfortable transportation services for individuals and groups. Whether you're traveling for business or leisure, our professional drivers ensure a smooth and pleasant journey..</p>
+      </div>
+
+      <!-- Column 2: Links -->
+      <div class="col-md-3 mb-3">
+        <h4>USEFULL LINK</h4>
+        <ul class="list-unstyled">
+          <li><a href="#" >Our Service</a></li>
+          <li><a href="#" >Blog</a></li>
+          <li><a href="#" >Partner</a></li>
+          <li><a href="#" >About Us</a></li>
+          <li><a href="#" >Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Links -->
+      <div class="col-md-3 mb-3">
+
+        <ul class="list-unstyled">
+          <h4></h4>
+          <li><a href="#" >FAQ</a></li>
+          <li><a href="#" >Terms & Condition</a></li>
+          <li><a href="#" >Imprint</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="col-md-3 mb-3">
+        <h4>CONTACT US</h4>
+        <i class="fas fa-map-marker-alt location-icon"></i>&nbsp;&nbsp;SSRN TRANSFER LLC
+      <br>200 BROADHOLLOW RD STE,<br>207
+          MELVILLE, NY 11747
+        <p><i class="fas fa-clock location-icon"></i> &nbsp;&nbsp;Mon-Fri: 8 AM - 8 PM</p>
+        <p><i class="fas fa-envelope location-icon"></i>&nbsp;&nbsp; Email:ssrntransfer&#64;gmail.com </p>
+        <p><i class="fas fa-phone location-icon"></i> &nbsp;&nbsp;Phone: +1 (347) 863-0884</p>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+<div class="container">
+  <div class="left">
+      <h1>আপনার শিরোনাম</h1>
+      <p>এটি একটি প্যারাগ্রাফ যেখানে আপনি আপনার তথ্য রাখতে পারেন।</p>
+  </div>
+  <div class="right">
+      <img src="your-image.jpg" alt="Description of Image" />
+  </div>
+</div>
+
+
+</div>
+
+      <div class="tab-pane fade" id="chauffeurservice" role="tabpanel" aria-labelledby="chauffeurservice-tab"></div>
+
+      <div class="tab-pane fade" id="sightseeingtour" role="tabpanel" aria-labelledby="sightseeingtour-tab"></div>
+
+      <div class="tab-pane fade" id="eventride" role="tabpanel" aria-labelledby="eventride-tab"></div>
+
+      <div class="tab-pane fade" id="courierservice" role="tabpanel" aria-labelledby="courierservice-tab"></div>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Bootstrap JS (required for tabs to function) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Active state handling for FAQ
+    document.querySelectorAll('.faq-header').forEach(header => {
+      header.addEventListener('click', () => {
+        // Remove 'active' class from all headers
+        document.querySelectorAll('.faq-header').forEach(h => {
+          h.classList.remove('active');
+          h.querySelector('.faq-icon').classList.remove('rotate');
+        });
+
+        // Add 'active' class to the clicked header
+        if (!header.nextElementSibling.classList.contains('show')) {
+          header.classList.add('active');
+          header.querySelector('.faq-icon').classList.add('rotate');
+        }
+      });
+    });
+
+    // Reset active state when collapse is hidden
+    document.querySelectorAll('.collapse').forEach(collapse => {
+      collapse.addEventListener('hidden.bs.collapse', event => {
+        event.target.previousElementSibling.classList.remove('active');
+        event.target.previousElementSibling.querySelector('.faq-icon').classList.remove('rotate');
+      });
+    });
+  </script>
+ <script>
+        // Initialize the map
+        function initMap() {
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 10,
+                center: { lat: 40.712776, lng: -74.005974 },  // Default to New York
+            });
+
+            // Add a marker to the map
+            new google.maps.Marker({
+                position: { lat: 40.712776, lng: -74.005974 },
+                map: map,
+                title: "New York City"
+            });
+        }
+    </script>
+
+    <!-- Replace YOUR_GOOGLE_MAPS_API_KEY with your actual API key -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&callback=initMap&v=weekly" async defer></script>
+
+
+</body>
+
+
+</html>
+
+
+
+
